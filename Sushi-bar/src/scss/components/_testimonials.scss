@@ -1,0 +1,53 @@
+.testimonials {
+    background-color: #111;
+}
+
+.testimonials__container {
+    max-width: 1068px;
+    padding: 50px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.testimonials__txt {
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    color: $color-green;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    &::before {
+        content: "\201D";
+        font-size: 60px;
+    }
+    @include respond(phone) {
+        font-size: 18px;
+    }
+}
+
+.tesmonials__user {
+    font-size: 25px;
+    font-family: 'Permanent Marker';
+    color: $color-green;
+}
+
+.social-media {
+    max-width: 1068px;
+    padding: 20px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.scm-icon {
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+    transition: all 0.3s;
+    &:not(:last-of-type) {
+        margin-right: 10px;
+    }
+    &:hover {
+        color: $color-green;
+    }
+}

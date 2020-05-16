@@ -1,0 +1,32 @@
+.about {
+    background-color: $color-green-dark;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 70px;
+
+    @include respond(tab-port) {
+        padding: 50px 40px;
+    }
+    @include respond(phone) {
+        flex-direction: column;
+    }
+}
+
+.about__txt {
+    padding: 20px 60px;
+
+    @include respond(laptop) {
+        padding: 15px 30px;
+    }
+    @include respond(tab-port) {
+        padding: 15px 15px;
+    }
+}
+
+.about__photo {
+    margin-bottom: 10px;
+}
+
+.brush-box {
+    display: flex;
+}

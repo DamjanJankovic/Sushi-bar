@@ -1,0 +1,72 @@
+@font-face {
+	font-family: "flat-icons";
+	src: url('../assets/fonts/flat-icons.eot');
+	src: url('../assets/fonts/flat-icons.woff2') format('woff2'), 
+		url('../assets/fonts/flat-icons.woff') format('woff'),
+		url('../assets/fonts/flat-icons.ttf') format('truetype');
+}
+
+@mixin icon-styles {
+	font-family: "flat-icons";
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	// speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+	text-decoration: none;
+	text-transform: none;
+}
+
+%icon {
+	@include icon-styles;
+}
+
+@function icon-char($filename) {
+	$char: "";
+
+	@if $filename == facebook-with-circle {
+		$char: "\E001";
+	}
+	@if $filename == google-with-circle {
+		$char: "\E002";
+	}
+	@if $filename == instagram-with-circle {
+		$char: "\E003";
+	}
+	@if $filename == pinterest-with-circle {
+		$char: "\E004";
+	}
+	@if $filename == twitter-with-circle {
+		$char: "\E005";
+	}
+
+	@return $char;
+}
+
+@mixin icon($filename, $insert: before, $extend: true) {
+	&::#{$insert} {
+		@if $extend {
+			@extend %icon;
+		} @else {
+			@include icon-styles;
+		}
+		content: icon-char($filename);
+	}
+}
+
+.icon-facebook-with-circle {
+	@include icon(facebook-with-circle);
+}
+.icon-google-with-circle {
+	@include icon(google-with-circle);
+}
+.icon-instagram-with-circle {
+	@include icon(instagram-with-circle);
+}
+.icon-pinterest-with-circle {
+	@include icon(pinterest-with-circle);
+}
+.icon-twitter-with-circle {
+	@include icon(twitter-with-circle);
+}

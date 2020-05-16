@@ -1,0 +1,54 @@
+.dishes {
+    background-color: #111;
+    padding: 100px 20px;
+}
+
+.dishes__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: $color-green-dark;
+    text-align: center;
+}
+
+.dishes__box,
+.dishes__box--mobile {
+    display: flex;
+}
+
+.dishes__box {
+    @include respond(phone) {
+        display: none;
+    }
+}
+
+.dishes__box--mobile {
+    @include respond(phone) {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.dishes__img {
+    flex: 0 0 25%;
+    position: relative;
+    overflow: hidden;
+}
+
+.text-box {
+    padding: 40px 30px;
+    text-align: center;
+    flex: 0 0 25%;
+
+    @include respond(laptop) {
+        padding: 30px 20px;
+    }
+    @include respond(tab-port) {
+        padding: 10px 5px;
+    }
+}
+
+.dishes__photo {
+    width: 100%;
+    height: 100%;
+    display: block;
+}

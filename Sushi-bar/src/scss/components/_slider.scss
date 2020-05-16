@@ -1,0 +1,70 @@
+.slider {
+    background-color: $color-green-dark;
+    padding: 50px;
+
+    @include respond(phone) {
+        padding: 30px;
+    }
+}
+
+.slides {
+    display: block;
+    max-width: 1068px;
+    max-height: 25vh;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0;
+
+    @include respond(tab-port) {
+        max-height: 20vh;
+    }
+    @include respond(phone) {
+        max-height: 25vh;
+    }
+}
+
+.slick-dots {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+    @include respond(phone) {
+        bottom: -25px;
+    }
+}
+
+.slick-dots li {
+    position: relative;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin: 0 3px;
+    padding: 0;
+    cursor: pointer;
+    
+    &.slick-active {
+        button {
+            background: $color-green;
+        }
+    }
+}
+
+.slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 12px;
+    height: 12px;
+    padding: 2px;
+    cursor: pointer;
+    color: transparent;
+    border: 1px solid $color-green;
+    outline: none;
+    background: #fff;
+    border-radius: 50%;
+    transition: all .2s;
+}

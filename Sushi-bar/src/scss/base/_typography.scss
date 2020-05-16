@@ -1,0 +1,116 @@
+@include font-face('GoodDog', '../assets/fonts/GOODDC__.ttf', 400, normal);
+@include font-face('GoodDog', '../assets/fonts/GOODDP__.ttf', 600, normal);
+
+.heading-primary {
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    font-size: 60px;
+    color: $color-green;
+    margin-bottom: 170px;
+    font-family: 'Montserrat', sans-serif;
+
+    @include respond(laptop) {
+        font-size: 50px;
+    }
+    @include respond(tab-port) {
+        font-size: 35px;
+    }
+
+    @include respond(phone) {
+        font-size: 30px;
+        margin-bottom: 80px;
+    }
+}
+
+.heading-secondary {
+    color: $color-green;
+    margin-bottom: 40px;
+    font-family: 'Permanent Marker';
+    display: flex;
+    flex-direction: column;
+
+    @include respond(tab-port) {
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+    @include respond(phone) {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+}
+
+.heading-secondary--span {
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 45px;
+    font-weight: 100;
+    text-transform: uppercase;
+
+    @include respond(tab-port) {
+        font-size: 35px;
+    }
+    @include respond(phone) {
+        font-size: 28px;
+    }
+}
+
+.heading-tertiary {
+    margin-bottom: 10px;
+    color: #fff;
+    font-family: 'Permanent Marker';
+    font-weight: 200;
+    font-size: 20px;
+}
+
+.paragraph {
+    color: #fff;
+    font-size: 30px;
+    font-family: 'Montserrat', sans-serif;
+
+    @include respond(laptop) {
+        font-size: 20px;   
+    }
+    @include respond(phone) {
+        font-size: 16px;
+    }
+}
+
+.about__text {
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 100;
+    line-height: 1.7;
+}
+
+.small-heading {
+    font-family: 'Permanent Marker';
+    color: #fff;
+    font-size: 16px;
+}
+
+.small-text {
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.text {
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    @include respond(phone) {
+        font-size: 14px;
+    }
+}
+
+.price {
+    color: #fff;
+    font-family: 'Permanent Marker';
+}
+
+.label {
+    color: #fff;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+}
